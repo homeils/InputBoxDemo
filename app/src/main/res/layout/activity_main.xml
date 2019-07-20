@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.renoside.inputbox.InputBox
+        android:id="@+id/username"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        app:ico_background="@drawable/username"
+        app:ico_size="30"
+        app:input_size="15"
+        app:input_color="#803"
+        app:input_hint="请输入用户名"
+        app:is_clear="true"
+        app:layout_constraintBottom_toTopOf="@id/password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.renoside.inputbox.InputBox
+        android:id="@+id/password"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        app:ico_background="@drawable/password"
+        app:ico_size="30"
+        app:input_size="15"
+        app:input_color="#803"
+        app:input_hint="请输入密码..."
+        app:is_password="true"
+        app:layout_constraintBottom_toTopOf="@id/button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
